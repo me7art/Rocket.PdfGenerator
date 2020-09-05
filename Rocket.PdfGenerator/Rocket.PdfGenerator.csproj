@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F48B93D-0204-43FD-BE1F-0FD5752FF123}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rocket.PdfGenerator</RootNamespace>
+    <AssemblyName>Rocket.PdfGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HelpersLibrary\AssemblyHelper\AssemblyFileExtractor.cs" />
+    <Compile Include="HelpersLibrary\AssemblyHelper\IAssemblyVersion.cs" />
+    <Compile Include="HelpersLibrary\TempFileManager.cs" />
+    <Compile Include="HelpersLibrary\ProcessManager\ConsoleParameters\IConsoleParameter.cs" />
+    <Compile Include="HelpersLibrary\ProcessManager\ConsoleParameters\IContentParameter.cs" />
+    <Compile Include="HelpersLibrary\ProcessManager\ConsoleParameters\ParameterBuilder.cs" />
+    <Compile Include="HelpersLibrary\ProcessManager\ConsoleParameters\SimpleParameter.cs" />
+    <Compile Include="HelpersLibrary\ProcessManager\ConsoleParameters\SimpleValueParameter.cs" />
+    <Compile Include="HelpersLibrary\ProcessManager\ProcessHelper.cs" />
+    <Compile Include="HtmlToPdfConverter.GeneratePdf.cs" />
+    <Compile Include="HtmlToPdfConverter.GeneratePdfFromFile.cs" />
+    <Compile Include="HtmlToPdfConverter.GeneratePdfFromFiles.cs" />
+    <Compile Include="InputOutput\Formats\InputFile.cs" />
+    <Compile Include="InputOutput\Formats\InputHtmlString.cs" />
+    <Compile Include="InputOutput\Formats\OutputByteArray.cs" />
+    <Compile Include="InputOutput\Formats\OutputFile.cs" />
+    <Compile Include="InputOutput\Formats\OutputStream.cs" />
+    <Compile Include="InputOutput\Formats\WHHtmlInputBase.cs" />
+    <Compile Include="InputOutput\Formats\IInputData.cs" />
+    <Compile Include="InputOutput\IInputVisitor.cs" />
+    <Compile Include="InputOutput\InputFileProvider.cs" />
+    <Compile Include="InputOutput\Formats\IOutputData.cs" />
+    <Compile Include="InputOutput\IOutputVisitor.cs" />
+    <Compile Include="InputOutput\OutputFileProvider.cs" />
+    <Compile Include="InputOutput\OutputVisitorResult.cs" />
+    <Compile Include="InputOutput\ResultProvider.cs" />
+    <Compile Include="InputOutput\VisitorResult.cs" />
+    <Compile Include="PageOrientation.cs" />
+    <Compile Include="PageSize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HtmlToPdfConverter.cs" />
+    <Compile Include="RocketPDFParameterManager.cs" />
+    <Compile Include="WkHtmlInput.cs" />
+    <Compile Include="PageMargins.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\IWkHtmlToPDFParametersProvider.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\CoverFilePathParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\CoverHtmlParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\CustomWkHtmlArgsParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\FooterFilePathParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\GenerateTocParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\GrayscaleParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\HeaderFilePathParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\InputFileParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\LowQualityParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\OutputFileParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\PageFooterHtmlParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\PageHeaderHtmlParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\PageHeightParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\PageMarginsParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\PageOrientationParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\PageSizeParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\PageWidthParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\QuietParameter.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\WKHtmlToPDFParameterBuilder.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\WKHtmlToPDFParameters.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\WkHtmlToPdfParametersInternal.cs" />
+    <Compile Include="WkHtmlToPdf.Rocket\Parameters\ZoomParameter.cs" />
+    <Compile Include="WKHtmlToPDFVersions.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="WkHtmlToPdf\_0_12_6_1_mxecross\win32\wkhtmltopdf.exe.gz" />
+    <EmbeddedResource Include="WkHtmlToPdf\_0_12_6_1_mxecross\win64\wkhtmltopdf.exe.gz" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WkHtmlToPdf\_0_12_2_4_msvc2013\Win32\wkhtmltopdf.exe.gz" />
+    <EmbeddedResource Include="WkHtmlToPdf\_0_12_2_4_msvc2013\Win64\wkhtmltopdf.exe.gz" />
+    <EmbeddedResource Include="WkHtmlToPdf\_0_12_4_mingww64\win32\wkhtmltopdf.exe.gz" />
+    <EmbeddedResource Include="WkHtmlToPdf\_0_12_4_mingww64\win64\wkhtmltopdf.exe.gz" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
