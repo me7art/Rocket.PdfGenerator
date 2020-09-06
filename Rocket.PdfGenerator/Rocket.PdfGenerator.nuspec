@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Rocket.PdfGenerator</title>
+    <authors>Maksim Serykh</authors>
+    <owners>$author$</owners>
+    <license type="expression">GPL-3.0-or-later</license>
+    <projectUrl>https://github.com/me7art/Rocket.PdfGenerator</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HTML to PDF converter (WkHtmlToPdf wrapper) for C#/.NET. Open source</description>
+    <summary>Open source wrapper for wkhtmltopdf utility to convert html to pdf.</summary>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2020 Maksim Serykh</copyright>
+    <tags>PDF Html WkHtmlToPdf Converter html-to-pdf free-html-to-pdf pdf-generator wrapper c# FreePdfGenerator</tags>
+
+
+  </metadata>
+</package>
